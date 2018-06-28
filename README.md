@@ -16,14 +16,16 @@ to render HTML into PDF and various image formats using the Qt WebKit rendering 
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/wkhtmltopdf-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/wkhtmltopdf-feedstock)
-OSX: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/wkhtmltopdf-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/wkhtmltopdf-feedstock)
+![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/wkhtmltopdf/badges/version.svg)](https://anaconda.org/conda-forge/wkhtmltopdf)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/wkhtmltopdf/badges/downloads.svg)](https://anaconda.org/conda-forge/wkhtmltopdf)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-wkhtmltopdf-green.svg)](https://anaconda.org/conda-forge/wkhtmltopdf) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/wkhtmltopdf.svg)](https://anaconda.org/conda-forge/wkhtmltopdf) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/wkhtmltopdf.svg)](https://anaconda.org/conda-forge/wkhtmltopdf) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/wkhtmltopdf.svg)](https://anaconda.org/conda-forge/wkhtmltopdf) |
 
 Installing wkhtmltopdf
 ======================

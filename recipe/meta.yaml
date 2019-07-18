@@ -19,6 +19,7 @@ requirements:
   run:
     - fontconfig
     - xorg-libxrender
+    - xorg-libxext
 
 test:
   commands:

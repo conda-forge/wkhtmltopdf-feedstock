@@ -18,6 +18,7 @@ build:
 requirements:
   run:
     - fontconfig
+    - xorg-libxrender
 
 test:
   commands:

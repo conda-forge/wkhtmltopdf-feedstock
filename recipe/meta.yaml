@@ -17,7 +17,7 @@ build:
 
 requirements:
   run:
-    - fontconfig 2.12.*
+    - fontconfig
 
 test:
   commands:

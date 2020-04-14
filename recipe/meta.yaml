@@ -1,6 +1,6 @@
 {% set name = "wkhtmltopdf" %}
 {% set major_minor = "0.12" %}
-{% set version = major_minor + ".4" %}
+{% set version = major_minor + ".5" %}
 
 package:
   name: {{ name|lower }}
@@ -8,8 +8,8 @@ package:
 
 source:
   fn: wkhtmltox-{{ version }}_linux-generic-amd64.tar.xz  # [linux]
-  url: https://github.com/{{ name }}/{{ name }}/releases/download/{{ version }}/wkhtmltox-{{ version }}_linux-generic-amd64.tar.xz  # [linux]
-  sha256: 049b2cdec9a8254f0ef8ac273afaf54f7e25459a273e27189591edc7d7cf29db  # [linux]
+  url: https://github.com/{{ name }}/{{ name }}/archive/{{ version }}.tar.gz  # [linux]
+  sha256: 861d6e61e2f5beb2d8daaade2cd5a85b84065ee9fac0d6d85000d8a7712a4621  # [linux]
 
 build:
   number: 0

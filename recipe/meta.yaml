@@ -1,21 +1,39 @@
 {% set name = "wkhtmltopdf" %}
 {% set major_minor = "0.12" %}
-{% set version = major_minor + ".4" %}
+{% set version = major_minor + ".6" %}
+# qt submodule hash as at the wkhtmltopdf release tag
+{% set qt_commit_hash = "7480f44f696fb7db1d473cf447a2c99a656789a9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: wkhtmltox-{{ version }}_linux-generic-amd64.tar.xz  # [linux]
-  url: https://github.com/{{ name }}/{{ name }}/releases/download/{{ version }}/wkhtmltox-{{ version }}_linux-generic-amd64.tar.xz  # [linux]
-  sha256: 049b2cdec9a8254f0ef8ac273afaf54f7e25459a273e27189591edc7d7cf29db  # [linux]
+  - url: https://github.com/wkhtmltopdf/wkhtmltopdf/archive/{{ version }}.tar.gz
+    fn: wkhtmltopdf-{{ version }}.tar.gz
+    sha256: adcced78492e7366d940c66a1327a85d3ae8c45190f486f545fdaa84cac662f0  # [linux]
+    folder: wkhtmltopdf
+  - url: https://github.com/wkhtmltopdf/qt/archive/{{ qt_commit_hash }}.tar.gz
+    fn: wkhtmltopdf-qt.tar.gz
+    sha256: ef17b2dee45e26d07d9e879b41879972bb68f78a8ccf6abdc80e37b3ff7238b3  # [linux]
+    folder: wkhtmltopdf/qt
+    patches:
+      - config.cpp.longpath.patch
 
 build:
   number: 0
   skip: True  # [win or osx]
 
 requirements:
+  build:
+    - {{ compiler('cxx') }}
+  host:
+    - freetype 2.7|2.7.*  # [unix]
+    - jpeg 9*
+    - libpng >=1.6.28,<1.7
+    - fontconfig   # [linux]
+    - xorg-libxext     # [linux]
+    - xorg-libxrender  # [linux]
   run:
     - fontconfig
     - xorg-libxrender

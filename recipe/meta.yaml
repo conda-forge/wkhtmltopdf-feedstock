@@ -29,7 +29,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - freetype 2.7|2.7.*  # [unix]
-    - jpeg 9*
+    - jpeg
     - libpng >=1.6.28,<1.7
     - fontconfig   # [linux]
     - xorg-libxext     # [linux]

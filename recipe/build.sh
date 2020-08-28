@@ -30,7 +30,7 @@ export CXXFLAGS="$CXXFLAGS -std=gnu++11"
 
 # This warning causes a huge amount of spew in the build logs.
 if [ "$cxx_compiler" = gxx ] ; then
-CXXFLAGS="$CXXFLAGS -Wno-expansion-to-defined"
+export CXXFLAGS="$CXXFLAGS -Wno-expansion-to-defined"
 fi
 
 export LDFLAGS="$LDFLAGS -Wl,-rpath-link,$PREFIX/lib"

@@ -31,6 +31,7 @@ requirements:
     - freetype 2.7|2.7.*  # [unix]
     - jpeg
     - libpng >=1.6.28,<1.7
+    - openssl 1.1.*
     - fontconfig   # [linux]
     - xorg-libxext     # [linux]
     - xorg-libxrender  # [linux]

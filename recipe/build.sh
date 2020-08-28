@@ -3,21 +3,6 @@
 # First build patched qt4 static lib
 cd wkhtmltopdf/qt
 
-# We're linking openssl statically with the -openssl-linked argument
-# to qt's configure. So we need libopenssl-static. We also need the
-# headers from openssl. But if we add those packages to requirements
-# in meta.yml as normal, there will be conflicts and we can't do the
-# following hack to remove the .so files to force it to be linked
-# statically.
-conda create -y --prefix "${SRC_DIR}/openssl_hack" -c conda-forge  \
-      --no-deps --yes --copy --prefix "${SRC_DIR}/openssl_hack"  \
-      libopenssl-static=1.1.* openssl=1.1.*
-export OPENSSL_LIBS="-L${SRC_DIR}/openssl_hack/lib -lssl -lcrypto"
-# Remove the .so files so the linker will actually do static linking.
-rm ${SRC_DIR}/openssl_hack/lib/libcrypto.so*
-rm ${SRC_DIR}/openssl_hack/lib/libssl.so*
-#rm -rf ${PREFIX}/include/openssl
-
 # Remainder of this setup before ./configure is cribbed from the qt4 branch of qt-feedstock.
 compiler_mkspec=mkspecs/common/g++-base.conf
 flag_mkspec=mkspecs/linux-g++/qmake.conf

@@ -22,7 +22,6 @@ build:
 
 requirements:
   build:
-    - libarchive  # [linux]
     - 7zip  # [win]
   run:
     - fontconfig  # [linux]

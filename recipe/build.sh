@@ -1,8 +1,7 @@
 #!/bin/bash
 set -ex
 
-# Extract the RPM using bsdtar (from libarchive)
-bsdtar -xf *.rpm
+# conda-build extracts the RPM automatically into SRC_DIR
 
 mkdir -p $PREFIX/bin
 mkdir -p $PREFIX/include

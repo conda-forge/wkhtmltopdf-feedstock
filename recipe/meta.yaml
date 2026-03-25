@@ -1,23 +1,22 @@
 {% set name = "wkhtmltopdf" %}
 {% set major_minor = "0.12" %}
-{% set version = major_minor + ".6" %}
-{% set pkg_release = "1" %}
+{% set version = major_minor + ".4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: wkhtmltox-{{ version }}-{{ pkg_release }}.centos7.x86_64.rpm  # [linux]
-  url: https://github.com/{{ name }}/packaging/releases/download/{{ version }}-{{ pkg_release }}/wkhtmltox-{{ version }}-{{ pkg_release }}.centos7.x86_64.rpm  # [linux]
-  sha256: f390b5ea5bd00664ec088701243727275d519e41c9b165737c7929ebbb9b8e67  # [linux]
+  fn: wkhtmltox-{{ version }}_linux-generic-amd64.tar.xz  # [linux]
+  url: https://github.com/{{ name }}/{{ name }}/releases/download/{{ version }}/wkhtmltox-{{ version }}_linux-generic-amd64.tar.xz  # [linux]
+  sha256: 049b2cdec9a8254f0ef8ac273afaf54f7e25459a273e27189591edc7d7cf29db  # [linux]
 
-  fn: wkhtmltox-{{ version }}-{{ pkg_release }}.msvc2015-win64.exe  # [win]
-  url: https://github.com/{{ name }}/packaging/releases/download/{{ version }}-{{ pkg_release }}/wkhtmltox-{{ version }}-{{ pkg_release }}.msvc2015-win64.exe  # [win]
-  sha256: 1efcfaf8472871268fd399865a3e62b435b91d4413009b80830eaaff7a57d088  # [win]
+  fn: wkhtmltox-{{ version }}_msvc2015-win64.exe  # [win]
+  url: https://github.com/{{ name }}/{{ name }}/releases/download/{{ version }}/wkhtmltox-{{ version }}_msvc2015-win64.exe  # [win]
+  sha256: 14a5996adc77dc606944dbc0dc682bff104cd38cc1bec19253444cb87f259797  # [win]
 
 build:
-  number: 0
+  number: 1
   skip: True  # [osx]
 
 requirements:

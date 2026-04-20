@@ -165,5 +165,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@melund](https://github.com/melund/)
 * [@scopatz](https://github.com/scopatz/)
 

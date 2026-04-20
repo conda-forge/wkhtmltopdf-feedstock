@@ -11,7 +11,7 @@ package:
 source:
   - if: win
     then:
-      fn: wkhtmltox-${{ version }}-${{ pkg_release }}.msvc2015-win64.exe
+      file_name: wkhtmltox-${{ version }}-${{ pkg_release }}.msvc2015-win64.exe
       url: https://github.com/${{ name }}/packaging/releases/download/${{ version }}-${{ pkg_release }}/wkhtmltox-${{ version }}-${{ pkg_release }}.msvc2015-win64.exe
       sha256: 1efcfaf8472871268fd399865a3e62b435b91d4413009b80830eaaff7a57d088
 

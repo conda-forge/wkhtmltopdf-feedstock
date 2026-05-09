@@ -12,7 +12,6 @@ Summary: Command line tools to render HTML into PDF and various image formats.
 wkhtmltopdf and wkhtmltoimage are open source (LGPLv3) command line tools
 to render HTML into PDF and various image formats using the Qt WebKit rendering engine.
 
-
 Current build status
 ====================
 
@@ -31,13 +30,6 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5176&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/wkhtmltopdf-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5176&branchName=main">
@@ -173,5 +165,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@melund](https://github.com/melund/)
 * [@scopatz](https://github.com/scopatz/)
 
